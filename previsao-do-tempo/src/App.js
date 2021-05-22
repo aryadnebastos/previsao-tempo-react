@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 const api = 'https://api.hgbrasil.com/weather?woeid=12578840&format=json-cors&locale=pt';
-//const busca = 'https://api.hgbrasil.com/stats/find_woeid?key=17284dd0&format=json-cors&sdk_version=console&city_name=';
 export default class App extends React.Component {
 state = {
   city: "",
@@ -17,14 +16,7 @@ componentDidMount(){
       forecast: data.results.forecast
     });
   });
-/*   fetch(api)
-    .then(response => response.json())
-    .then(json => {
-      console.log(json);
-      this.setState({
-        city: json.results.city_name
-      });
-    }); */
+
 }
 render() {
   return (
@@ -65,5 +57,3 @@ render() {
 }
 
 }
-
-//export default App;
